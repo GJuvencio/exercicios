@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Calculando Glicose no Sangue</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Calculando Glicose no Sangue</h1>
+
+            <label for="txt1">Digite a quantidade de glicose no sangue:</label>
+            
+            <input type="number" id="txtGlicose">
+
+            <button onclick="botao_click()">Calcular</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            var qtdglicoseTexto = document.getElementById("txtGlicose").value;
+
+            var glicose = parseInt(qtdglicoseTexto);
+
+            var mensagem = "";
+
+            if (glicose <= 100) {
+                mensagem = "Sua glicose está: NORMAL!";
+            }
+            else if (glicose > 100 && glicose <= 140) {
+                mensagem = "Sua glicose está: ELEVADA!";
+            }
+            else if (glicose > 140) {
+                mensagem = "Sua glicose está no estágio de DIABETES, procure um médico imediatamente!";
+            }
+            alert(mensagem);
+        }
+
+    </script>
+
+</body>
+</html>
